@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selamat Ulang Tahun!</title>
+  <style>
+
+    .bg-logos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+    }
+
+    .bg-logos img {
+  position: absolute;
+  width: 40px;
+  height: auto;
+  opacity: 0.5;
+  animation: slideHorizontal 40s linear infinite;
+    }
+
+    @keyframes slideHorizontal {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(110vw);
+  }
+    }
+
+
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      transition: all 0.6s ease;
+    }
+
+    img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #db2777;
+      margin-bottom: 10px;
+    }
+
+    p {
+      max-width: 500px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    footer {
+    padding: 40px 20px;
+     background-color: #fce7f3;
+    display: flex;
+     justify-content: center;
+    align-items: center;
+     text-align: center;
+    }
+
+    footer .footer-content {
+    max-width: 600px;
+    }
+
+    footer h2 {
+      font-size: 2rem;
+      color: #9333ea;
+    }
+
+    footer p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Animasi fade-in saat muncul */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+    <div class="bg-logos">
+        <img src="logo-word.png" style="top: 10%; left: -60px; animation-delay: 0s;">
+        <img src="logo-excel.png" style="top: 20%; left: -60px; animation-delay: 5s;">
+        <img src="logo-powerpoint.png" style="top: 30%; left: -60px; animation-delay: 10s;">
+        <img src="logo-outlook.png" style="top: 40%; left: -60px; animation-delay: 15s;">
+        <img src="logo-word.png" style="top: 50%; left: -60px; animation-delay: 20s;">
+        <img src="logo-excel.png" style="top: 60%; left: -60px; animation-delay: 25s;">
+        <img src="logo-powerpoint.png" style="top: 70%; left: -60px; animation-delay: 30s;">
+        <img src="logo-outlook.png" style="top: 80%; left: -60px; animation-delay: 35s;">
+      </div>
+      
+      
+            
+
+  <section class="fade-in">
+    <img src="163.JPG" alt="Foto 1">
+    <h1>Selamat Ulang Tahun! 🎉</h1>
+    <p>Hari ini adalah hari spesial untuk orang yang sangat kami cintai.</p>
+  </section>
+
+  <section class="fade-in">
+    <img src="DSC08155.JPG" alt="Foto 2">
+    <h1>Selamat Ulang Tahun Ayah</h1>
+    <p>
+        Selamat ulang tahun untuk keluarga kesayangan kami! Semoga keberkahan selalu menyertai hidup kita, dan setiap langkah dipenuhi dengan kebahagiaan dan kesuksesan.
+    </p>
+  </section>
+
+  <section class="fade-in">
+    <img src="Party (124).jpg" alt="Foto 3">
+    <h1>Semoga Ayah Sehat Dan Rejekinya Lancar Selalu</h1>
+  </section>
+
+  <section class="fade-in">
+    <img src="DSC06646.JPG" alt="Foto 4">
+    <h1>Aku Sayang Ayah</h1>
+    <p>Hari ini adalah perayaan atas kehadiranmu yang luar biasa.</p>
+  </section>
+
+  <footer class="fade-in">
+    <div class="footer-content">
+      <h2>Selamat merayakan hari Ulang Tahun 💐</h2>
+      <p>Dengan cinta dari Arya Bimantara</p>
+    </div>
+  </footer>
+    
+
+  <script>
+    // Tambahkan animasi saat elemen masuk viewport
+    const fadeEls = document.querySelectorAll('.fade-in');
+
+    const onScroll = () => {
+      fadeEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('load', onScroll);
+  </script>
+
+</body>
+</html>
